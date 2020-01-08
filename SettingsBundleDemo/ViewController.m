@@ -29,4 +29,11 @@
     NSLog(@"%@", [userDefaults objectForKey:@"slider_preference"]);
 }
 
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    
+    [userDefaults setObject:@"修改后" forKey:@"title_identifier"];
+    NSLog(@"%@", [userDefaults objectForKey:@"title_identifier"]);
+}
+
 @end
